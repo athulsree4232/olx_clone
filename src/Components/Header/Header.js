@@ -36,8 +36,13 @@ function Header() {
           </div>
         </div>
         <div className="language">
-          <span> ENGLISH </span>
-          <Arrow></Arrow>
+          <select name="language" id="">
+            <option value="english">ENGLISH</option>
+            <option value="hindi">Hindi</option>
+            <option value="malayalam">Malayalam</option>
+          </select>
+          {/* <span> ENGLISH </span> */}
+          {/* <Arrow></Arrow> */}
         </div>
         <div className="loginPage">
           <span>{user ? ` Welcome ${user.displayName}` : "Login"}</span>
@@ -45,6 +50,7 @@ function Header() {
         </div>
         {user && (
           <span
+            className="logout"
             onClick={() => {
               firebase.auth().signOut();
               history.push("/login");
@@ -54,7 +60,12 @@ function Header() {
           </span>
         )}
 
-        <div className="sellMenu">
+        <div
+          className="sellMenu"
+          onClick={() => {
+            history.push("/create");
+          }}
+        >
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>

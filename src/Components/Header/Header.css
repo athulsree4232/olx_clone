@@ -84,7 +84,7 @@
   align-items: center;
 }
 
-.language span {
+.language select {
   /* justify-content: space-between;
   align-items: center; */
   font-size: 15px;
@@ -112,7 +112,7 @@
   height: 2px;
 }
 
-.loginPage a{
+.loginPage a {
   text-decoration: none;
 }
 
@@ -154,7 +154,9 @@
 .sellMenu .sellMenuContent span {
   margin-left: 5px;
 }
-
+.logout {
+  cursor: pointer;
+}
 @media only screen and (max-width: 700px) {
   .placeSearch,
   .productSearch,
